@@ -1,1 +1,0 @@
-<?php header("Location: hw1.html", true, 301); exit; ?>
