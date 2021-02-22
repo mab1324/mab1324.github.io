@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #000;
+  background-color: black;
   color: #EEE;
   font-size: 16px;
   font-family: 'EB Garamond', serif;
@@ -15,6 +15,11 @@ h1 {
 
 h2 {
   font-size: 2em;
+}
+
+mark {
+  background-color: #EEE;
+  color: black;
 }
 
 .image {
