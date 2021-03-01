@@ -92,6 +92,69 @@ function draw() {
   curveVertex(830*wCo, 1576*hCo);
   curveVertex(830*wCo, 1576*hCo);
   endShape();
+  stroke(col2);
+  noFill();
+  strokeWeight(4);
+  beginShape();
+  curveVertex(425*wCo, 406*hCo);
+  curveVertex(425*wCo, 406*hCo);
+  curveVertex(469*wCo, 380*hCo);
+  curveVertex(516*wCo, 372*hCo);
+  curveVertex(563*wCo, 377*hCo);
+  curveVertex(563*wCo, 377*hCo);
+  endShape();
+  beginShape();
+  curveVertex(305*wCo, 420*hCo);
+  curveVertex(305*wCo, 420*hCo);
+  curveVertex(262*wCo, 380*hCo);
+  curveVertex(205*wCo, 385*hCo);
+  curveVertex(170*wCo, 392*hCo);
+  curveVertex(170*wCo, 392*hCo);
+  endShape();
+  beginShape();
+  curveVertex(336*wCo, 644*hCo);
+  curveVertex(336*wCo, 644*hCo);
+  curveVertex(326*wCo, 702*hCo);
+  curveVertex(320*wCo, 760*hCo);
+  curveVertex(355*wCo, 775*hCo);
+  curveVertex(355*wCo, 775*hCo);
+  endShape();
+  //Mewoth
+  beginShape();
+  curveVertex(250*wCo, 855*hCo);
+  curveVertex(250*wCo, 855*hCo);
+  curveVertex(284*wCo, 873*hCo);
+  curveVertex(322*wCo, 872*hCo);
+  curveVertex(355*wCo, 858*hCo);
+  curveVertex(355*wCo, 858*hCo);
+  endShape();
+  beginShape();
+  curveVertex(355*wCo, 858*hCo);
+  curveVertex(355*wCo, 858*hCo);
+  curveVertex(398*wCo, 868*hCo);
+  curveVertex(447*wCo, 859*hCo);
+  curveVertex(466*wCo, 821*hCo);
+  curveVertex(466*wCo, 821*hCo);
+  endShape();
+  //Eyes
+  /*
+  stroke(255, 255, 255);
+  fill(255, 255, 255);
+  strokeWeight(1);
+  beginShape();
+  curveVertex(154*wCo, 563*hCo);
+  curveVertex(154*wCo, 563*hCo);
+  curveVertex(197*wCo, 488*hCo);
+  curveVertex(289*wCo, 477*hCo);
+  curveVertex(312*wCo, 552*hCo);
+  curveVertex(312*wCo, 552*hCo);
+  endShape();
+  */
+  strokeWeight(1);
+  stroke(0, 0, 0);
+  fill(0, 0, 0);
+  circle(233*wCo, 523*hCo, 84*wCo);
+  circle(502*wCo, 515*hCo, 84*wCo);
 }
 
 function centerCanvas() {
