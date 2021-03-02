@@ -8,6 +8,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.9em;
+  font-family: sans-serif;
+  color: red;
   margin: 0
 }
 
@@ -19,9 +22,14 @@ div {
   z-index: 1;
 }
 
+header {
+  z-index: 1;
+}
+
 .button1 {
   /*background-color: black;*/
   /*border: solid black 1px;*/
+  /*opacity: 50%*/
   position: absolute;
   left: 36.280vw;
   top: 24.950vw;
@@ -30,11 +38,49 @@ div {
 }
 
 .button2 {
-  /*background-color: black;*/
-  /*border: solid black 1px;*/
   position: absolute;
   left: 50.280vw;
   top: 24.550vw;
   width: 4.375vw;
   height: 4.375vw;
+}
+
+.button3 {
+  position: absolute;
+  left: 42.700vw;
+  top: 33.250vw;
+  width: 2.375vw;
+  height: 7.175vw;
+}
+
+.button4 {
+  position: absolute;
+  left: 39.300vw;
+  top: 42.500vw;
+  width: 11.350vw;
+  height: 3.100vw;
+}
+
+.button5 {
+  position: absolute;
+  left: 35.000vw;
+  top: 19.500vw;
+  width: 7.350vw;
+  height: 2.500vw;
+}
+
+.button6 {
+  position: absolute;
+  left: 48.360vw;
+  top: 19.200vw;
+  width: 7.400vw;
+  height: 2.000vw;
+}
+
+.button7 {
+  position: absolute;
+  left: 40.360vw;
+  top: 53.200vw;
+  width: 22.000vw;
+  height: 30.000vw;
 }
