@@ -1,9 +1,40 @@
 /* style.css */
+:root {
+  --vco: calc(100vw / 1920px);
+}
 
 body {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0
+}
+
+canvas {
+  z-index: 0;
+}
+
+div {
+  z-index: 1;
+}
+
+.button1 {
+  /*background-color: black;*/
+  /*border: solid black 1px;*/
+  position: fixed;
+  left: 36.280vw;
+  top: 24.950vw;
+  width: 4.375vw;
+  height: 4.375vw;
+}
+
+.button2 {
+  /*background-color: black;*/
+  /*border: solid black 1px;*/
+  position: fixed;
+  left: 50.280vw;
+  top: 24.550vw;
+  width: 4.375vw;
+  height: 4.375vw;
 }

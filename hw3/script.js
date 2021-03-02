@@ -3,7 +3,7 @@ let col1, col2, col3, col4, wCo, hCo, canvas;
 function setup() {
   wCo = windowWidth/1920;
   hCo = wCo;
-  canvas = createCanvas(windowWidth, 2198*hCo);
+  canvas = createCanvas(907*wCo, 2198*hCo);
   centerCanvas();
   background(255, 255, 255);
   col1 = color(255, 215, 185);
@@ -137,19 +137,6 @@ function draw() {
   curveVertex(466*wCo, 821*hCo);
   endShape();
   //Eyes
-  /*
-  stroke(255, 255, 255);
-  fill(255, 255, 255);
-  strokeWeight(1);
-  beginShape();
-  curveVertex(154*wCo, 563*hCo);
-  curveVertex(154*wCo, 563*hCo);
-  curveVertex(197*wCo, 488*hCo);
-  curveVertex(289*wCo, 477*hCo);
-  curveVertex(312*wCo, 552*hCo);
-  curveVertex(312*wCo, 552*hCo);
-  endShape();
-  */
   strokeWeight(1);
   stroke(0, 0, 0);
   fill(0, 0, 0);
@@ -166,6 +153,6 @@ function centerCanvas() {
 function windowResized() {
   wCo = windowWidth/1920;
   hCo = wCo;
-  resizeCanvas(windowWidth, 2198*hCo);
+  resizeCanvas(907*wCo, 2198*hCo);
   centerCanvas();
 }
