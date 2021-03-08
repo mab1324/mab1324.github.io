@@ -50,7 +50,7 @@ button:hover {
     text-align: center;
     background-color: #340c0c;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     padding: 16px 32px;
   } 
 
@@ -60,4 +60,14 @@ a:link {
 
 a:visited {
 	color: hotpink;
+}
+
+ul {
+	text-align: left;
+	margin-left: 20px;
+	padding: 10px;
+}
+
+ul li {
+	margin: 10px;
 }
