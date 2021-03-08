@@ -9,6 +9,8 @@ html {
 .centerbox{
     display:flex;
     justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 #titleBox{
     display:flex;
