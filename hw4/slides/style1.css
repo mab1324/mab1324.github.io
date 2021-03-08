@@ -47,3 +47,118 @@ button:hover {
     color: white;
   }
 
+  .container1 {
+    width: 50%;
+  }
+  .container2 {
+    width: 50%;
+  }
+  .container3 {
+    width: 50%;
+  }
+  .container4 {
+    width: 50%;
+  }
+  .picturesbox{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 50%;
+    height: 80%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    margin:20px;
+  }
+  
+  .middle1 {
+    transition: .5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+  }
+
+  .middle2 {
+    transition: .5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+  }
+  .middle3 {
+    transition: .5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+  }
+  .middle4 {
+    transition: .5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+  }
+  
+  .container1:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container2:hover .image {
+    opacity: 0.3;
+  }
+  .container1:hover .middle1 {
+    opacity: 1;
+  }
+  .container2:hover .middle2 {
+    opacity: 1;
+  }
+  .container3:hover .image {
+    opacity: 0.3;
+  }
+  .container3:hover .middle3 {
+    opacity: 1;
+  }
+  .container4:hover .image {
+    opacity: 0.3;
+  }
+  .container4:hover .middle4 {
+    opacity: 1;
+  }
+  
+  .text1 {
+    text-align: center;
+    background-color: #340c0c;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+  .text2 {
+    background-color: #340c0c;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+  .text3 {
+    background-color: #340c0c;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  .text4 {
+    background-color: #340c0c;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    text-align: center;
+  }
+
+
