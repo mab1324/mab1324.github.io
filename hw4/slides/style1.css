@@ -1,0 +1,49 @@
+
+html { 
+    background: url(../img/page1.jpg) no-repeat center center fixed; 
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.centerbox{
+    display:flex;
+    justify-content: center;
+}
+#titleBox{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(108, 10, 10,0.6);
+    text-align: center;
+    color:aliceblue;
+    font-family: "DotGothic16",serif;
+    font-size: 50px;
+    padding: 10px;
+    width: 700px;
+    height: 200px;
+}
+
+.homebutton{
+    width:100px;
+    height:1px;
+}
+#buttonscontainer{
+display:block;
+align-items: flex-end;
+}
+button{
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 2vw;
+    left: 400px;
+    margin: 10px;
+    font-size: 10px;
+    font-family: "DotGothic16",serif;
+    outline: 0;
+}
+button:hover {
+    background: rgba(208, 38, 38, 0.6);
+    color: white;
+  }
+
