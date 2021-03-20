@@ -85,9 +85,3 @@ div img:hover {
     width: 48%;
   }
 }
-
-@media only screen and (max-width: 500px) {
-  .cover {
-    width: 98%;
-  }
-}

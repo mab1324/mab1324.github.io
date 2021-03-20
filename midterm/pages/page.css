@@ -27,6 +27,16 @@ img {
   height: 400px;
 }
 
+@media only screen and (max-width: 100vh) {
+  img {
+    width: 80%;
+    height: auto;
+  }
+  iframe {
+    width: 80%;
+  }
+}
+
 ul {
   text-align: left;
   list-style-position: inside;
