@@ -30,6 +30,12 @@ h2 {
   margin: .75em 0 .75em 0;
 }
 
+a {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #F9F9F9;
+}
+
 footer {
   margin-top: 3em;
   margin-bottom: 1em;
