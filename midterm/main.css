@@ -18,10 +18,10 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.2em;
   font-weight: bold;
-  font-family: 'Voces', sans-serif;
-  margin: .6em 0 .3em 0;
+  font-family: 'Lato', sans-serif;
+  margin: .65em 0 .4em 0;
   margin:
 }
 
@@ -76,12 +76,12 @@ div img:hover {
 
 @media only screen and (max-width: 700px) {
   .cover {
-    width: 50%;
+    width: 48%;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .cover {
-    width: 100%;
+    width: 98%;
   }
 }
