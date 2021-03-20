@@ -5,10 +5,16 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: #000;
-  color: #EEE;
+  background-image: url("../img/gensokyo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #F9F9F9;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 20px;
   text-align: center;
+  text-shadow: 0px 0px 6px #000, 0px 0px 1.5px rgba(0, 0, 0, 0.8);
 }
 
 .cover {
@@ -20,13 +26,21 @@ ul {
   text-align: left;
   list-style-position: inside;
   display: inline-block;
+  text-shadow: 1px 1px 3px #000, 0px 0px 2px #000;
 }
 
 ul li {
   font-size: 1.25em;
   margin-top: 0.5em;
+  list-style: none;
 }
 
+ul li:before {
+  content: '\262F';
+  padding: 10px;
+  font-size: 1em;
+  text-shadow: 0px 0px 4px #000, 0px 0px 3px #000;
+}
 h1 {
   font-size: 2.75em;
   font-weight: bold;
@@ -38,4 +52,8 @@ h2 {
   font-size: 2.25em;
   font-weight: normal;
   margin: .75em 0 .75em 0;
+}
+
+a {
+  color: #F9F9F9;
 }
