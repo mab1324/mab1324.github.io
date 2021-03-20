@@ -1,0 +1,41 @@
+/*page.css*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000;
+  color: #EEE;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.cover {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ul {
+  text-align: left;
+  list-style-position: inside;
+  display: inline-block;
+}
+
+ul li {
+  font-size: 1.25em;
+  margin-top: 0.5em;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight: bold;
+  margin: .5em 0 .5em 0;
+  margin:
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: normal;
+  margin: .75em 0 .75em 0;
+}
