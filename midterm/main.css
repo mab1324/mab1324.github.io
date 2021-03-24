@@ -19,28 +19,45 @@ body {
   text-shadow: 0px 0px 6px #000, 0px 0px 1.5px rgba(0, 0, 0, 0.8);
 }
 
-header {
+body>header {
   background-color: rgba(0, 0, 0, 0.66);
   margin-bottom: 1em;
+  height: 12vw;
 }
 
-h1 {
+.wf-loading body>header>h1 {
+  font-family: 'Noto Sans', sans-serif;
+  visibility: hidden;
+}
+
+.wf-active body>header>h1 {
+  margin-top: 2vw;
   font-size: 5vw;
   font-weight: bold;
-  font-family: 'Nunito Sans', sans-serif;
   text-shadow: 0px 0px 3px #000;
+  visibility: visible;
 }
 
-h2 {
+.wf-loading h2 {
+  visibility: hidden;
+}
+
+.wf-active h2 {
   font-size: 2.25em;
   font-weight: normal;
-  margin: .3em 0 .75em 0;
+  margin: .3em 0 .7em 0;
+  visibility: visible;
 }
 
 a {
   text-decoration: underline;
-  text-decoration-skip-ink: none;
   color: #F9F9F9;
+}
+
+@supports (text-decoration-skip-ink: none) {
+  a {
+    text-decoration-skip-ink: none;
+  }
 }
 
 footer {

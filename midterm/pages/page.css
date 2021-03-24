@@ -22,9 +22,18 @@ body {
   margin-bottom: 1em;
 }
 
-img {
+.wf-loading h1, h2, h3, ul li, ul li:before, img, iframe {
+  visibility: hidden;
+}
+
+.wf-active img {
   width: auto;
   height: 400px;
+  visibility: visible;
+}
+
+.wf-active iframe {
+  visibility: visible;
 }
 
 @media only screen and (max-width: 100vh) {
@@ -44,36 +53,40 @@ ul {
   text-shadow: 1.2px 1px 4px rgba(0, 0, 0, 0.9), 0px 0px 2px rgba(0, 0, 0, 1);
 }
 
-ul li {
+.wf-active ul li {
   font-size: 1.25em;
   margin-top: 0.3em;
   list-style: none;
+  visibility: visible;
 }
 
-ul li:before {
+.wf-active ul li:before {
   content: '\262F';
   padding: 10px;
   font-size: 1em;
   text-shadow: 0px 0px 4px #000, 0px 0px 3px #000;
+  visibility: visible;
 }
 
-h1 {
+.wf-active h1 {
   font-size: 2.75em;
   font-weight: bold;
   margin: .5em 0 .5em 0;
-  margin:
+  visibility: visible;
 }
 
-h2 {
+.wf-active h2 {
   font-size: 2.25em;
   font-weight: normal;
   margin: .6em 0 .7em 0;
+  visibility: visible;
 }
 
-h3 {
+.wf-active h3 {
   font-size: 2em;
   font-weight: normal;
   margin: -.5em 0 .5em 0;
+  visibility: visible;
 }
 
 footer {
