@@ -1,0 +1,366 @@
+/* main.css */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  image-rendering: pixelated;
+  overflow: hidden;
+}
+
+#screen {
+  display: inline-block;
+  height: 1080px;
+  width: 1920px;
+  margin: auto;
+  padding: 0;
+  background-color: #111;
+}
+
+@media only screen and (max-height: 1080px) and (max-width: 1920px) {
+  #screen {
+    width: 1280px;
+    height: 720px;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1280px) {
+  #screen {
+    width: 640px;
+    height: 360px;
+  }
+}
+
+#splash {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  background-image: url('assets/splash.png');
+  background-size: cover;
+  filter: brightness(0%);
+  z-index: 100;
+}
+
+.splashing {
+  animation-name: splash-show;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+@keyframes splash-show {
+  0% { filter: brightness(0%); }
+  100% { filter: brightness(100%); }
+}
+
+#menu {
+  display: inline-block;
+  position: absolute;
+  height: 1080px;
+  width: 1080px;
+  margin: 0;
+  margin-left: 560px;
+  padding: 0;
+  background-color: black;
+  padding-left: 36px;
+  font-size: 48px;
+  text-align: center;
+  color: #FFBADC;
+  font-family: "mago3", "ＭＳ Ｐゴシック", monospace;
+  src: url('assets/mago3.ttf');
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+  visibility: hidden;
+  z-index: 4;
+}
+
+@media only screen and (max-height: 1080px) and (max-width: 1920px) {
+  #menu {
+    margin-left: 280px;
+    padding-left: 24px;
+    width: 720px;
+    height: 720px;
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1280px) {
+  #menu {
+    margin-left: 140px;
+    padding-left: 12px;
+    width: 360px;
+    height: 360px;
+    font-size: 16px;
+  }
+}
+
+#stats {
+  display: inline-block;
+  position: absolute;
+  width: 420px;
+  height: 1080px;
+  margin-left: 1500px;
+  padding-left: 36px;
+  font-size: 48px;
+  color: white;
+  font-family: "mago3", "ＭＳ Ｐゴシック", monospace;
+  src: url('assets/mago3.ttf');
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+  visibility: hidden;
+  background-color: #111;
+  z-index: 4;
+}
+
+@media only screen and (max-height: 1080px) and (max-width: 1920px) {
+  #stats {
+    margin-left: 1000px;
+    padding-left: 24px;
+    width: 280px;
+    height: 720px;
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1280px) {
+  #stats {
+    margin-left: 500px;
+    padding-left: 12px;
+    width: 140px;
+    height: 360px;
+    font-size: 16px;
+  }
+}
+
+#left-banner {
+  display: inline-block;
+  position: absolute;
+  width: 420px;
+  height: 1080px;
+  margin: 0px;
+  visibility: hidden;
+  background-color: #111;
+  z-index: 4;
+}
+
+@media only screen and (max-height: 1080px) and (max-width: 1920px) {
+  #left-banner {
+    width: 280px;
+    height: 720px;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1280px) {
+  #left-banner {
+    width: 140px;
+    height: 360px;
+  }
+}
+
+#end-screen {
+  display: inline-block;
+  position: absolute;
+  height: 1080px;
+  width: 1920px;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-size: 48px;
+  text-align: center;
+  color: #FFBADC;
+  font-family: "mago3", "ＭＳ Ｐゴシック", monospace;
+  src: url('assets/mago3.ttf');
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+  visibility: hidden;
+  z-index: 100;
+}
+
+.ending {
+  animation-name: end-show;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  z-index: 100;
+}
+
+@keyframes end-show {
+  0% { filter: opacity(0%); z-index: 100; }
+  100% { filter: opacity(100%); z-index: 100; }
+}
+
+@media only screen and (max-height: 1080px) and (max-width: 1920px) {
+  #end-screen {
+    width: 1280px;
+    height: 720px;
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1280px) {
+  #end-screen {
+    width: 640px;
+    height: 360px;
+    font-size: 16px;
+  }
+}
+
+#play-area {
+  display: inline-block;
+  position: absolute;
+  height: 1080px;
+  width: 1080px;
+  margin: 0;
+  margin-left: 560px;
+  padding: 0;
+  background-color: black;
+  animation: phase-1 3s ease-in-out infinite alternate;
+}
+
+@keyframes phase-1 {
+  0% { background-color: black; }
+  100% { background-color: indigo; }
+}
+
+@media only screen and (max-height: 1080px) and (max-width: 1920px) {
+  #play-area {
+    margin-left: 280px;
+    width: 720px;
+    height: 720px;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1280px) {
+  #play-area {
+    margin-left: 140px;
+    width: 360px;
+    height: 360px;
+  }
+}
+
+#player {
+  width: 96px;
+  height: 144px;
+  background-image: url('assets/player.png');
+  background-size: cover;
+  position: absolute;
+  left: 492px;
+  top: 840px;
+  z-index: 2;
+  visibility: hidden;
+}
+
+@media only screen and (max-height: 1080px) and (max-width: 1920px) {
+  #player {
+    width: 64px;
+    height: 96px;
+    /*left: 328px;
+    top: 560px;*/
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1280px) {
+  #player {
+    width: 32px;
+    height: 48px;
+    /*left: 164px;
+    top: 280px;*/
+  }
+}
+
+#boss {
+  width: 192px;
+  height: 192px;
+  background-image: url('assets/boss.png');
+  background-size: cover;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 444px;
+  top: 108px;
+  z-index: 1;
+  visibility: hidden;
+}
+
+@media only screen and (max-height: 1080px) and (max-width: 1920px) {
+  #boss {
+    width: 128px;
+    height: 128px;
+    /*left: 296px;
+    top: 72px;*/
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1280px) {
+  #boss {
+    width: 64px;
+    height: 64px;
+    /*left: 148px;
+    top: 36px;*/
+  }
+}
+
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -22px;
+  width: 348px;
+  height: 36px;
+  color: white;
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+}
+
+progress::-webkit-progress-value {
+  background-color: white;
+}
+
+@media only screen and (max-height: 1080px) and (max-width: 1920px) {
+  progress {
+    width: 232px;
+    height: 24px;
+    border-width: 2px;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1280px) {
+  progress {
+    width: 116px;
+    height: 12px;
+    border-width: 1px;
+  }
+}
+
+.bullet {
+  position: absolute;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+}
+
+.shot {
+  position: absolute;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+canvas {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  z-index: 99;
+}
