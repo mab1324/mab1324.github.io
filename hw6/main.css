@@ -73,6 +73,7 @@ body {
   font-family: "mago3", "ＭＳ Ｐゴシック", monospace;
   src: url('assets/mago3.ttf');
   font-smooth: never;
+  font-weight: normal;
   -webkit-font-smoothing : none;
   visibility: hidden;
   z-index: 4;
@@ -107,7 +108,7 @@ body {
   padding-left: 36px;
   font-size: 48px;
   color: white;
-  font-family: "mago3", "ＭＳ Ｐゴシック", monospace;
+  font-family: "mago3", monospace;
   src: url('assets/mago3.ttf');
   font-smooth: never;
   -webkit-font-smoothing : none;
@@ -315,7 +316,7 @@ progress {
   width: 348px;
   height: 36px;
   color: white;
-  background-color: white;
+  background-color: #111;
   border-style: solid;
   border-color: white;
   border-width: 3px;
@@ -325,8 +326,31 @@ progress::-webkit-progress-value {
   background-color: white;
 }
 
+progress::-webkit-progress-bar {
+  background-color: #111;
+}
+
+progress::-webkit-progress-inner-element {
+  border: 3px solid white;
+}
+
+progress::-moz-progress-bar {
+  background-color: white;
+  border: 3px solid white;
+  width: 348px;
+  height: 36px;
+}
+
 @media only screen and (max-height: 1080px) and (max-width: 1920px) {
   progress {
+    width: 232px;
+    height: 24px;
+    border-width: 2px;
+  }
+  progress::-webkit-progress-inner-element {
+    border-width: 2px;
+  }
+  progress::-moz-progress-bar {
     width: 232px;
     height: 24px;
     border-width: 2px;
@@ -335,6 +359,14 @@ progress::-webkit-progress-value {
 
 @media only screen and (max-height: 720px) and (max-width: 1280px) {
   progress {
+    width: 116px;
+    height: 12px;
+    border-width: 1px;
+  }
+  progress::-webkit-progress-inner-element {
+    border-width: 1px;
+  }
+  progress::-moz-progress-bar {
     width: 116px;
     height: 12px;
     border-width: 1px;

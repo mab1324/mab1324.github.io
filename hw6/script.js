@@ -29,6 +29,7 @@ var score = 0;
 var graze = 0;
 var splashed = false;
 var ended = false;
+var mago = usingMago();
 
 // Tracks input
 // - When a key is pressed down, add it to input
@@ -245,18 +246,18 @@ function updateBoss(boss) {
       if (bossTimer1 % 4 === 0) {
         let midX = parseInt(boss.css("left"))+(parseInt(boss.css("width"))/2);
         let midY = parseInt(boss.css("top"))+(parseInt(boss.css("height"))/2);
-        addBullet(midX,midY,2*res,counter+Math.PI,16*res,"assets/bullet1.png");
-        addBullet(midX,midY,2*res,-1*(counter)+Math.PI,16*res,"assets/bullet1.png");
-        addBullet(midX,midY,2*res,counter+2+Math.PI,16*res,"assets/bullet1.png");
-        addBullet(midX,midY,2*res,-1*(counter+2)+Math.PI,16*res,"assets/bullet1.png");
+        addBullet(midX,midY,1*res,counter+Math.PI,16*res,"assets/bullet1.png");
+        addBullet(midX,midY,1*res,-1*(counter)+Math.PI,16*res,"assets/bullet1.png");
+        addBullet(midX,midY,1*res,counter+2+Math.PI,16*res,"assets/bullet1.png");
+        addBullet(midX,midY,1*res,-1*(counter+2)+Math.PI,16*res,"assets/bullet1.png");
         counter += 3;
       }
       for (w=0; w<bullets.length; w++) {
         if (bullets[w] != undefined) {
-          if (bullets[w].ySpeed < 0 && bullets[w].time >= 36 && bullets[w].event == 0) {
+          if (bullets[w].ySpeed < 0 && bullets[w].time >= 60 && bullets[w].event == 0) {
             bullets[w].ySpeed *= -1; bullets[w].event = 1;
           }
-          if (bullets[w].time >= 120 && bullets[w].event < 2) {
+          if (bullets[w].time >= 220 && bullets[w].event < 2) {
             bullets[w].xSpeed *= -1; bullets[w].event = 2;
           }
         }
@@ -284,7 +285,7 @@ function updateBoss(boss) {
         let midX = parseInt(boss.css("left"))+(parseInt(boss.css("width"))/2);
         let midY = parseInt(boss.css("top"))+(parseInt(boss.css("height"))/2);
         for (r=0; r<9; r++) {
-          addSakura(midX,midY,5*res,counter+(r*2*Math.PI/9),14*res);
+          addSakura(midX,midY,4*res,counter+(r*2*Math.PI/9),14*res);
         }
         counter += sign*(Math.PI/16);
       }
@@ -328,9 +329,9 @@ function updateBoss(boss) {
         let midX = parseInt(boss.css("left"))+(parseInt(boss.css("width"))/2);
         let midY = parseInt(boss.css("top"))+(parseInt(boss.css("height"))/2);
         for (r=0; r<5; r++) {
-          addBullet(midX,midY,6*res,sign*(counter+2+r*(Math.PI*2/5)),16*res,"assets/bullet1.png");
-          addBullet(midX,midY,6*res,counter+2.2+r*(Math.PI*2/5),16*res,"assets/bullet1.png");
-          addBullet(midX,midY,6*res,sign*(counter+2.4+r*(Math.PI*2/5)),16*res,"assets/bullet1.png");
+          addBullet(midX,midY,5*res,sign*(counter+2+r*(Math.PI*2/5)),16*res,"assets/bullet1.png");
+          addBullet(midX,midY,5*res,counter+2.2+r*(Math.PI*2/5),16*res,"assets/bullet1.png");
+          addBullet(midX,midY,5*res,sign*(counter+2.4+r*(Math.PI*2/5)),16*res,"assets/bullet1.png");
         }
         counter += bossTimer1;
       }
@@ -360,7 +361,7 @@ function updateBoss(boss) {
       }
     }
     else {
-      if (bossTimer1 % 20 === 0) {
+      if (bossTimer1 % 15 === 0) {
         let midX = parseInt(boss.css("left"))+(parseInt(boss.css("width"))/2);
         let midY = parseInt(boss.css("top"))+(parseInt(boss.css("height"))/2);
         let bul = addBullet(midX,midY,res,counter*(Math.PI)/3,24*res,"assets/bullet1.png");
@@ -450,10 +451,10 @@ function updateBoss(boss) {
         let midX = parseInt(boss.css("left"))+(parseInt(boss.css("width"))/2);
         let midY = parseInt(boss.css("top"))+(parseInt(boss.css("height"))/2);
         for (r=0; r<6; r++) {
-          addSakura(midX,midY,7*res,bossTimer1+(r*2*Math.PI/6),14*res);
+          addSakura(midX,midY,5*res,bossTimer1+(r*2*Math.PI/6),14*res);
         }
         for (r=0; r<8; r++) {
-          addSakura(midX,midY,6*res,counter+(r*2*Math.PI/8),14*res);
+          addSakura(midX,midY,4*res,counter+(r*2*Math.PI/8),14*res);
         }
         counter += sign*(Math.PI/8)+bossTimer1;
       }
@@ -573,19 +574,31 @@ function updateStats() {
   stats.append('</progress>');
   stats.append("</p>");
   if (lives >= 0) {
-    stats.append("<p>LIVES<br/>"+"&#x005F; ".repeat(Math.max(0,lives))+"</p>");
+    if (mago) {
+      stats.append("<p>LIVES<br/>"+"&#x005F; ".repeat(Math.max(0,lives))+"</p>");
+    } else {
+      stats.append("<p>LIVES<br/>"+"&#x2665; ".repeat(Math.max(0,lives))+"</p>");
+    }
   } else {
     stats.append("<p>LIVES<br/>INFINITE</p>");
   }
-  stats.append("<p>SPELL<br/>"+"&#x20AC; ".repeat(Math.max(0,bombs))+"</p>");
+  if (mago) {
+    stats.append("<p>SPELL<br/>"+"&#x20AC; ".repeat(Math.max(0,bombs))+"</p>");
+  } else {
+    stats.append("<p>SPELL<br/>"+"&#x2666; ".repeat(Math.max(0,bombs))+"</p>");
+  }
   stats.append("<p>GRAZE<br/>"+graze+"</p>");
   if (bossHP <= 6000) {
-    stats.append('<style>progress{color:red;background-color:red;border-color:red;}</style>');
-    stats.append('<style>progress::-webkit-progress-value{color:red;background-color:red;}</style>');
+    stats.append('<style>progress{color:red;border-color:red;}</style>');
+    stats.append('<style>progress::-webkit-progress-value{color:red;}</style>');
+    stats.append('<style>progress::-webkit-progress-inner-element{border-color:red;}</style>');
+    stats.append('<style>progress::-moz-progress-bar{background-color:red;border-color:red;}</style>');
   }
   else if (bossHP <= 18000) {
-    stats.append('<style>progress{color:yellow;background-color:yellow;border-color:yellow;}</style>');
-    stats.append('<style>progress::-webkit-progress-value{color:yellow;background-color:yellow;}</style>');
+    stats.append('<style>progress{color:yellow;border-color:yellow;}</style>');
+    stats.append('<style>progress::-webkit-progress-value{color:yellow;}</style>');
+    stats.append('<style>progress::-webkit-progress-inner-element{border-color:yellow;}</style>');
+    stats.append('<style>progress::-moz-progress-bar{background-color:yellow;border-color:yellow;}</style>');
   }
 }
 
@@ -724,4 +737,18 @@ function clearBullets() {
       bullets[i].alive = false;
     }
   }
+}
+
+function usingMago() {
+  var canvas = document.createElement("canvas");
+  var context = canvas.getContext("2d");
+  context.font = "48px monospace";
+  var fallbackSize = context.measureText("a1").width;
+  context.font = "48px 'mago3', monospace";
+  var actualSize = context.measureText("a1").width;
+  canvas = null;
+  if (actualSize === fallbackSize) {
+    return false;
+  }
+  return true;
 }
