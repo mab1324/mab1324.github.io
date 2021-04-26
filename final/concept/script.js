@@ -18,7 +18,7 @@ function nextSlide() {
 
 function getSlide() {
   let request = new XMLHttpRequest();
-  request.open('GET', 'https://./slides.json');
+  request.open('GET', 'https://mab1324.github.io/final/concept/slides.json');
   request.responseType = 'json';
   request.send();
   request.onload = function() {
@@ -37,11 +37,11 @@ function getSlide() {
     }
     if (data.hasOwnProperty("items")) {
       let items = data.items;
-      div.append("<ul>");
+      let itemString = "";
       for (i = 0; i < items.length; i++) {
-        div.append("<li>"+items[0]+"</li>");
+        itemString += "<li>"+items[0]+"</li>\n";
       }
-      div.append("</ul>");
+      div.append("<ul>\n"+itemString+"</ul>");
     }
   }
 }
