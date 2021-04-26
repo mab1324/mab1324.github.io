@@ -23,7 +23,7 @@
   {
     "header1": "Functions & Research",
     "items": [
-      "JQuery animations for fading/sliding sections",
+      "JQuery animations for fading and sliding animations",
       "Research: customized JS music player for character profiles",
       "Research (used on this site): using JSON data for the site, esp. profiles",
       "Research: AJAX: dynamic web pages (change content w/o reloading page)"
