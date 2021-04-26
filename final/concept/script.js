@@ -17,6 +17,7 @@ function nextSlide() {
 }
 
 function getSlide() {
+  console.log(slide);
   let request = new XMLHttpRequest();
   request.open('GET', 'https://mab1324.github.io/final/concept/slides.json');
   request.responseType = 'json';
@@ -24,6 +25,7 @@ function getSlide() {
   request.onload = function() {
     let slideData = request.response;
     let data = slideData[slide];
+    console.log(data);
     let div = $("#slides");
     div.html("");
     if (data.hasOwnProperty("title")) {

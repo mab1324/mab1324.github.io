@@ -9,24 +9,5 @@
       "Making an \"industry-level\" official site for a game project (that I haven't actually started)",
       "\"Industry-level\" meaning it <i>looks</i> like an official project site, not that it's industry-level under the hood",
     ]
-  },
-  {
-    "header1": "Textual Wireframe",
-    "items": [
-      "Main page",
-      "Story page",
-      "Characters page &#x2192; Profiles (interactive)",
-      "Screenshots page? (screenshots are also around the site)",
-      "Contact page"
-    ]
-  },
-  {
-    "header1": "Functions & Research",
-    "items": [
-      "JQuery animations for fading/sliding sections",
-      "Research: customized JS music player for character profiles",
-      "Research (used on this site): using JSON data for the site, esp. profiles",
-      "Research: AJAX: dynamic web pages (change content w/o reloading page)"
-    ]
   }
 ]
