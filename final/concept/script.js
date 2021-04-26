@@ -1,5 +1,5 @@
 const slideMin = 0;
-const slideMax = 1;
+const slideMax = 3;
 let slide = 0;
 
 $("#prev").on("click", prevSlide);
@@ -39,7 +39,7 @@ function getSlide() {
       let items = data.items;
       let itemString = "";
       for (i = 0; i < items.length; i++) {
-        itemString += "<li>"+items[0]+"</li>\n";
+        itemString += "<li>"+items[i]+"</li>\n";
       }
       div.append("<ul>\n"+itemString+"</ul>");
     }
