@@ -1,0 +1,7 @@
+/* gallery.css */
+.gallery-img #a0 {
+  background-image: url("assets/bowser-ball.jpg");
+}
+.gallery-img #a1 {
+  background-image: url("assets/roxas.jpg");
+}

@@ -26,13 +26,13 @@ function setPage(page) {
 
 function getPage() {
   switch(document.location.hash) {
-    case ("#main"):        { href = "./pages/main.htm"; break; }
-    case ("#story"):       { href = "./pages/story.htm"; break; }
-    case ("#gameplay"):    { href = "./pages/gameplay.htm"; break; }
-    case ("#characters"):  { href = "./pages/characters.htm"; break; }
-    case ("#gallery"):     { href = "./pages/gallery.htm"; break; }
-    case ("#contact"):     { href = "./pages/contact.htm"; break; }
-    default: { href = "./main.htm"; }
+    case ("#main"):        { href = "./pages/main.htm"; setTitle("Main | Infinite Alice"); break; }
+    case ("#story"):       { href = "./pages/story.htm"; setTitle("Story | Infinite Alice"); break; }
+    case ("#gameplay"):    { href = "./pages/gameplay.htm"; setTitle("Gameplay | Infinite Alice"); break; }
+    case ("#characters"):  { href = "./pages/characters.htm"; setTitle("Characters | Infinite Alice"); break; }
+    case ("#gallery"):     { href = "./pages/gallery.htm"; setTitle("Gallery | Infinite Alice"); break; }
+    case ("#contact"):     { href = "./pages/contact.htm"; setTitle("Contact | Infinite Alice"); break; }
+    default: { href = "./pages/main.htm"; setTitle("Main | Infinite Alice"); }
   }
   let request = new XMLHttpRequest();
   request.open('GET', href);
@@ -46,12 +46,12 @@ function getPage() {
       //div.css("bottom", "100vh");
       div.html("" + data);
       div.addClass("fadein");
-      div.css("animation-play-state", "running");
+      //div.css("animation-play-state", "running");
       div.one("animationend", function() { $("#main-body").removeClass("fadein"); fading = false; });
     }
     else {
       div.addClass("fadeout");
-      div.css("animation-play-state", "running");
+      //div.css("animation-play-state", "running");
       fading = true;
       div.one("animationend", function() { newPage(data); });
     }
@@ -59,6 +59,7 @@ function getPage() {
   request.onloadend = function() {
     if(request.status === 404) {
       error = true;
+      setTitle("404 | Infinite Alice");
       if (firstPage) {
         let div = $("#main-body");
         let content = '<header><h1>404 Error</h1></header><main><article><section><div class="seg"><div class="text"><h2>Page not found.</h2></div></div></section></article></main>';
@@ -79,4 +80,8 @@ function newPage(data) {
   div.removeClass("fadeout");
   div.addClass("fadein");
   div.one("animationend", function() { $("#main-body").removeClass("fadein"); fading = false; });
+}
+
+function setTitle(title) {
+  document.title = title;
 }
