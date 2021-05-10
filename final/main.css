@@ -36,6 +36,7 @@ a:visited {
 article {
   background-color: rgba(0, 0, 0, 0.7);
   margin: 0 auto;
+  margin-bottom: 1em;
   width: 80%;
   border-radius: 10px;
 }
