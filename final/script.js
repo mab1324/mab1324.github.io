@@ -42,16 +42,12 @@ function getPage() {
     let data = request.responseText;
     let div = $("#main-body");
     if (firstPage) {
-      //div.css("filter", "opacity(0%)");
-      //div.css("bottom", "100vh");
       div.html("" + data);
       div.addClass("fadein");
-      //div.css("animation-play-state", "running");
       div.one("animationend", function() { $("#main-body").removeClass("fadein"); fading = false; });
     }
     else {
       div.addClass("fadeout");
-      //div.css("animation-play-state", "running");
       fading = true;
       div.one("animationend", function() { newPage(data); });
     }
@@ -71,7 +67,6 @@ function getPage() {
 }
 
 function newPage(data) {
-  //content = data;
   let div = $("#main-body");
   if (error) {
     data = '<header><h1>404 Error</h1></header><main><article><section><div class="seg"><div class="text"><h2>Page not found.</h2></div></div></section></article></main>';
