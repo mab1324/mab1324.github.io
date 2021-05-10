@@ -506,6 +506,9 @@ ul>li:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  header>h1 {
+    font-size: 90%;
+  }
   article, section .seg {
     display: flex;
     flex-direction: column;
