@@ -528,6 +528,11 @@ ul>li:hover {
   #modal-img {
     max-width: 100%;
   }
+  #char-img {
+    margin-top: 2em;
+    width: auto;
+    max-width: 100%;
+  }
   #char-name-and-profile {
     position: relative;
     border-bottom-style: none;
