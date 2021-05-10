@@ -9,6 +9,9 @@ $("#nav-gallery").on("click", function() { setPage("gallery"); });
 $("#nav-contact").on("click", function() { setPage("contact"); });
 getPage();
 
+//window.onload = resizeBg;
+//window.onresize = resizeBg;
+
 function setPage(page) {
   if (!fading) {
     switch(page) {
@@ -80,3 +83,7 @@ function newPage(data) {
 function setTitle(title) {
   document.title = title;
 }
+
+/*function resizeBg() {
+  $("body").css("background-size","auto 100%");
+}*/
