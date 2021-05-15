@@ -249,7 +249,7 @@ ul>li:hover {
 }
 
 .char {
-  width: 15%;
+  width: 15vw;
   height: 32vw;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
   background-color: black;
@@ -592,7 +592,7 @@ ul>li:hover {
       transform: translateY(-8px) rotate(-45deg);
   }
   .char {
-    width: 30%;
+    width: 30vw;
     height: 64vw;
     margin-bottom: 1em;
   }
