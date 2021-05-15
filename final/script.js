@@ -11,6 +11,14 @@ getPage();
 
 //window.onload = resizeBg;
 //window.onresize = resizeBg;
+window.onhashchange = function() { getPage(); };
+$("body").on("click", ".hamburger", function() { mobileMenu(); });
+$("body").on("click", ".nav-item", function() { closeMobileMenu(); });
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
 
 function setPage(page) {
   if (!fading) {
@@ -23,7 +31,7 @@ function setPage(page) {
       case ("contact"): { document.location.hash = "contact"; break; }
       default: { document.location.hash = ""; }
     }
-    getPage();
+    //getPage();
   }
 }
 
@@ -82,6 +90,16 @@ function newPage(data) {
 
 function setTitle(title) {
   document.title = title;
+}
+
+function mobileMenu() {
+  $(".hamburger").toggleClass("open");
+  $(".navmenu").toggleClass("open");
+}
+
+function closeMobileMenu() {
+  $(".hamburger").removeClass("open");
+  $(".navmenu").removeClass("open");
 }
 
 /*function resizeBg() {

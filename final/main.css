@@ -106,12 +106,16 @@ img {
 }
 
 nav {
+  display: flex;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 8vh;
   z-index: 50;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 section {
@@ -197,19 +201,24 @@ section .text>h4 {
 }
 
 ul {
-  display: table;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 8vh;
 }
 
 ul>li {
-  display: table-cell;
-  width: 16.66%;
-  height: inherit;
+  /* display: table-cell; */
+  display: inline-flex;
+  list-style: none;
+  width: 16.67%;
+  height: 100%;
   font-family: 'Crimson Text', serif;
   font-size: 2em;
   text-align: center;
-  vertical-align: middle;
+  /* vertical-align: middle; */
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -217,6 +226,20 @@ ul>li {
 ul>li:hover {
   background-color: rgba(255, 255, 255, 1);
   color: black;
+}
+
+.hamburger {
+  display: none;
+  margin-right: 1em;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition-duration: 0.3s;
+    background-color: white;
 }
 
 .characters, .gallery {
@@ -258,6 +281,31 @@ ul>li:hover {
 .char:hover, .gallery-img:hover {
   transform: scale(1.025);
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
+
+.characters #a1 {
+  background-size: cover;
+  background-image: url('assets/aurettachar.png');
+}
+.characters #a2 {
+  background-size: cover;
+  background-image: url('assets/carneliachar.png');
+}
+.characters #a3 {
+  background-size: cover;
+  background-image: url('assets/mariechar.png');
+}
+.characters #a4 {
+  background-size: cover;
+  background-image: url('assets/prinnchar.png');
+}
+.characters #a5 {
+  background-size: cover;
+  background-image: url('assets/hikarichar.png');
+}
+.characters #a6 {
+  background-size: cover;
+  background-image: url('assets/mireichar.png');
 }
 
 #main-logo {
@@ -361,7 +409,12 @@ ul>li:hover {
 #char-img {
   display: inline-block;
   width: 25vw;
+  max-height: 100vh;
   text-align: center;
+}
+
+#modal-char-img {
+  max-height: 100vh;
 }
 
 #char-name-and-profile {
@@ -523,6 +576,21 @@ ul>li:hover {
     align-items: center;
     text-align: center;
   }
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+  }
+  /* This is that animation, you know, the hamburger -> X one */
+  .hamburger.open .bar:nth-child(2) {
+      opacity: 0;
+    }
+  .hamburger.open .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.open .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
   .char {
     width: 30%;
     height: 64vw;
@@ -535,6 +603,24 @@ ul>li:hover {
   .return {
     top: 0.2em;
     right: 0.5em;
+  }
+  .navmenu {
+    position: fixed;
+    top: -100vh;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .navmenu.open {
+    top: 8vh;
+  }
+  .nav-item {
+    width: 100%;
+    height: 2em;
+    background-color: rgba(0, 0, 0, 0.7);
   }
   #modal-img {
     max-width: 100%;
