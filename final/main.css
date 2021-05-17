@@ -246,6 +246,7 @@ ul>li:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  height: max-content;
 }
 
 .char {
